@@ -19,18 +19,26 @@ import { RequestAirdrop } from './RequestAirdrop';
 
 // Show Solana balance component import
 import { ShowSolBalance } from './ShowSolBalance'
+import { SendTokens } from './SendToken';
 
 function App() {
 
+  
+  const network = WalletAdapterNetwork.Devnet;
+
+  const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+  
+
 
   return (
-    <ConnectionProvider endpoint={"https://api.devnet.solana.com"}>
+    <ConnectionProvider endpoint={endpoint}>
     <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
           <div>
             <ShowSolBalance />
             <WalletMultiButton />
             <RequestAirdrop />
+            <SendTokens />
           </div>
         </WalletModalProvider>
     </WalletProvider>
