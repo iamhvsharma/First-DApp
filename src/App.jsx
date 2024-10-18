@@ -20,6 +20,7 @@ import { RequestAirdrop } from './RequestAirdrop';
 // Show Solana balance component import
 import { ShowSolBalance } from './ShowSolBalance'
 import { SendTokens } from './SendToken';
+import { SignMessage } from './SignMessage';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
             <WalletMultiButton />
             <RequestAirdrop />
             <SendTokens />
+            <SignMessage />
           </div>
         </WalletModalProvider>
     </WalletProvider>

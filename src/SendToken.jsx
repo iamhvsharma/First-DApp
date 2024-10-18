@@ -4,11 +4,13 @@ import { LAMPORTS_PER_SOL, PublicKey, SystemProgram, Transaction} from "@solana/
 
 export function SendTokens() {
     const wallet = useWallet();
-    const {connection} = useConnection();
+    const { connection } = useConnection();
 
     async function sendTokens() {
         let to = document.getElementById("to").value;
-        let amount = document.getElementById("amount").value;
+        let amount = document.getElementById("amt").value;
+        console.log(to, amount);
+        
         const transaction = new Transaction();
         transaction.add(SystemProgram.transfer({
             fromPubkey: wallet.publicKey,
@@ -22,7 +24,7 @@ export function SendTokens() {
 
     return <div>
         <input id="to" type="text" placeholder="To" />
-        <input id="amount" type="text" placeholder="Amount" />
+        <input id="amt" type="text" placeholder="Amount" />
         <button onClick={sendTokens}>Send</button>
     </div>
 }
