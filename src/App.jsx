@@ -37,7 +37,7 @@ function App() {
         <WalletModalProvider>
           <div>
             <ShowSolBalance />
-            <WalletMultiButton />
+            <WalletMultiButton  />
             <RequestAirdrop />
             <SendTokens />
             <SignMessage />
