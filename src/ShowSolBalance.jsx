@@ -17,8 +17,8 @@ export function ShowSolBalance() {
     getBalance();
 
     return (
-        <div className=" flex items-center justify-center h-20 text-center mt-12 text-3xl font-bold">
-         <div className="border-solid border-2 border-sky-500 p-5 rounded-xl">
+        <div className=" flex items-center justify-center h-12 text-center mt-12 mb-6 text-lg font-bold">
+         <div className="border-solid border-2 border-sky-500 p-2 rounded-xl">
          <h3>SOL Balance <div id="balance"></div> </h3> 
          </div>
         </div>

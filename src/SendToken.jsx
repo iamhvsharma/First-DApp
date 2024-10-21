@@ -22,9 +22,9 @@ export function SendTokens() {
         alert("Sent " + amount + " SOL to " + to);
     }
 
-    return <div>
-        <input id="to" type="text" placeholder="To" />
-        <input id="amt" type="text" placeholder="Amount" />
-        <button onClick={sendTokens}>Send</button>
+    return <div className="flex flex-col mt-3 gap-3 border-solid border-2 border-sky-500 p-5 rounded-xl">
+        <input className="px-2 py-1  rounded-xl font-semibold" id="to" type="text" placeholder="To" />
+        <input className="px-2 py-1 rounded-xl font-semibold" id="amt" type="text" placeholder="Amount" />
+        <button className="bg-[#0EA5E9] px-2 py-1 rounded-xl font-semibold hover:bg-[#236d8f]" onClick={sendTokens}>Send</button>
     </div>
 }

@@ -35,7 +35,7 @@ function App() {
     <ConnectionProvider endpoint={endpoint}>
     <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <div>
+          <div className='flex flex-col items-center justify-center'>
             <ShowSolBalance />
             <WalletMultiButton  />
             <RequestAirdrop />
